@@ -1,0 +1,43 @@
+/* style.css - tema biru laut & pasir keemasan */
+:root{
+  --sea:#0b6b8a; --sea-2:#0e9aa7; --sand:#f0d9a7; --leaf:#2b7a4b; --muted:#5b6b72;
+  --card:#ffffff;
+  --max-width:980px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;background:linear-gradient(180deg,#eaf7fb 0%,#ffffff 100%);color:#073040}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:20px}
+.site-header{background:linear-gradient(90deg,rgba(11,107,138,0.06),transparent);border-bottom:1px solid rgba(7,48,64,0.04)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:52px;height:52px;border-radius:10px;background:var(--sea);color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;box-shadow:0 6px 20px rgba(11,107,138,0.08)}
+.title{font-weight:700;font-size:18px}
+.nav a{margin-left:14px;text-decoration:none;color:var(--sea);font-weight:600}
+
+.main{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 24px rgba(7,48,64,0.04)}
+.intro h1{margin:0 0 8px;font-size:28px}
+.lead{color:var(--muted);margin:0}
+
+.gallery-card h2{margin-top:0;margin-bottom:12px}
+.slider{position:relative;overflow:hidden;border-radius:10px}
+.slides{display:flex;transition:transform 0.6s ease}
+.slide{min-width:100%;height:360px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.slide img{width:100%;height:100%;object-fit:cover}
+
+.arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.85);border:none;padding:10px;border-radius:50%;box-shadow:0 6px 18px rgba(7,48,64,0.08);cursor:pointer;font-size:20px}
+.arrow.left{left:12px}
+.arrow.right{right:12px}
+
+@media (max-width:720px){
+  .slide{height:220px}
+  .nav a{margin-left:10px;font-size:14px}
+  .title{font-size:16px}
+}
+
+/* content lists */
+.values-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.values-list li{background:linear-gradient(180deg,rgba(11,154,167,0.04),transparent);padding:12px;border-radius:10px}
+
+.actions-list{padding-left:18px}
+.site-footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:14px;text-align:center}
